@@ -6,7 +6,7 @@
 /*   By: apila-va <apila-va@42.abudhabi.ae>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 07:00:14 by apila-va          #+#    #+#             */
-/*   Updated: 2021/10/01 17:36:16 by apila-va         ###   ########.fr       */
+/*   Updated: 2021/10/01 20:00:28 by apila-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	size_t		i;
 
 	i = 0;
-	return (dest);
+	if(dest == src || !n)
+		return (dest);
 	while (i < n)
 	{
 		*((char *)dest + i) = *((char *)src + i);

@@ -6,7 +6,7 @@
 /*   By: apila-va <apila-va@42.abudhabi.ae>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 09:49:11 by apila-va          #+#    #+#             */
-/*   Updated: 2021/10/01 19:03:27 by apila-va         ###   ########.fr       */
+/*   Updated: 2021/10/01 20:18:15 by apila-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	{	
 		while (i < len)
 		{
-		printf("src < dest");
+//		printf("%c = %c\n",*((char *)dest + destlen ) , *((char *)src + srclen) );
 		*((char *)dest + destlen) = *((char *)src + srclen);
 		destlen--;
 		srclen--;
@@ -36,27 +36,30 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	}
 	else
 	{
-		printf("memcopying");
+		printf("memcopying \n");
 		ft_memcpy(dest, src, len);
 	}
 	return (dest);
 }
 
-int main (int argc,char **argv)
+/*int main (int argc,char **argv)
 {
-	char s1[] = "hello";
-	char s2[] = "world";
+	char src[] = "hellomm";
+	char dest[] = "world";
 
-	char s11[] = "hello";
-	char s22[] = "world";
+	char src1[] = "hello";
+	char dest2[] = "world";
 	
-	ft_memmove(s1,s2,2);
-	memmove(s11,s22,2);
+	ft_memmove(dest,src,2);
+	memmove(dest2,src1,2);
 
-	printf("%s\n", s1);
-	printf("%s", s11);
+//	ft_memmove(src + 5 ,src ,0);
+//	memmove(src + 5,src,0);
+
+	printf("%s\n", dest);
+	printf("%s", dest2);
 	return (0);
-}
+}*/
 /*
  DESCRIPTION
      The memmove() function copies len bytes from string src to string dst.  The two
