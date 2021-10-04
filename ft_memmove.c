@@ -6,7 +6,7 @@
 /*   By: apila-va <apila-va@42.abudhabi.ae>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 09:49:11 by apila-va          #+#    #+#             */
-/*   Updated: 2021/10/01 20:18:15 by apila-va         ###   ########.fr       */
+/*   Updated: 2021/10/04 04:32:10 by apila-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,29 +18,32 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	size_t srclen;
 	size_t destlen;
 
-	srclen = ft_strlen(src);
-	destlen = ft_strlen(dest);
+	srclen = 0;
+	destlen = 0;
 	i = 0;
 	if (dest == src || !len)
 		return (dest);
 	if (src < dest)
-	{	
+	{
 		while (i < len)
 		{
-//		printf("%c = %c\n",*((char *)dest + destlen ) , *((char *)src + srclen) );
-		*((char *)dest + destlen) = *((char *)src + srclen);
-		destlen--;
-		srclen--;
-		i++;
+	//	printf("%c = %c\n",*((char *)dest + (len - 1) ) , *((char *)src + (len - 1) ) );
+	//	return (0);
+		*((char *)dest + (len -1)) = *((char *)src + (len - 1) );
+	//	destlen++;
+	//	srclen++;
+	//	i++;
+		len--;
 		}
 	}
 	else
 	{
-		printf("memcopying \n");
+//		printf("memcopying \n");
 		ft_memcpy(dest, src, len);
 	}
 	return (dest);
 }
+
 
 /*int main (int argc,char **argv)
 {

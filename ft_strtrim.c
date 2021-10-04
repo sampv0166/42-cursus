@@ -6,7 +6,7 @@
 /*   By: apila-va <apila-va@42.abudhabi.ae>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 03:54:55 by apila-va          #+#    #+#             */
-/*   Updated: 2021/10/01 18:32:29 by apila-va         ###   ########.fr       */
+/*   Updated: 2021/10/04 09:15:03 by apila-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	startindex = getstartindex(s1, set);
 	endindex = getendindex(s1, set) + 1;
 	trimmedstr = malloc(sizeof(char ) * size + 1);
-	if (trimmedstr == NULL)
+	if (trimmedstr == NULL || s1 == NULL)
 		return (NULL);
 	ptr = trimmedstr;
 	while (startindex < endindex)

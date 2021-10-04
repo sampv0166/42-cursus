@@ -6,7 +6,7 @@
 /*   By: apila-va <apila-va@42.abudhabi.ae>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 03:18:18 by apila-va          #+#    #+#             */
-/*   Updated: 2021/10/01 03:47:40 by apila-va         ###   ########.fr       */
+/*   Updated: 2021/10/04 09:23:34 by apila-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*newstr;
 	char	*ptr;
-
+	
+	
 	newstr = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (newstr == NULL)
 		return (NULL);

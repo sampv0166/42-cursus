@@ -6,7 +6,7 @@
 /*   By: apila-va <apila-va@42.abudhabi.ae>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 02:43:45 by apila-va          #+#    #+#             */
-/*   Updated: 2021/10/01 03:16:51 by apila-va         ###   ########.fr       */
+/*   Updated: 2021/10/04 09:07:31 by apila-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*ptr;
 
 	substr = malloc(sizeof(char) * len + 1);
-	if (substr == NULL)
+	if (substr == NULL || s == NULL)
 		return (NULL);
+	if (start >= ft_strlen(s))
+		return (calloc(1, 1));
+
 	ptr = substr;
 	while (s[start] && len)
 	{

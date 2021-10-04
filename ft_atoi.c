@@ -6,7 +6,7 @@
 /*   By: apila-va <apila-va@42.abudhabi.ae>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 14:48:02 by apila-va          #+#    #+#             */
-/*   Updated: 2021/09/30 15:52:26 by apila-va         ###   ########.fr       */
+/*   Updated: 2021/10/04 08:44:02 by apila-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,11 @@ int	ft_atoi(const char *str)
 	flag = 0;
 	sign = 1;
 	ret = 0;
-	while (*str == ' ')
+	while (*str == '\t' || *str == '\v' || *str == '\f' || \
+		 *str == '\r' || *str == '\n' || *str == ' ')
+	{
 		str++;
+	}
 	if (str[0] == '-')
 	{
 		sign = sign * -1;
