@@ -6,7 +6,7 @@
 /*   By: apila-va <apila-va@42.abudhabi.ae>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 09:27:37 by apila-va          #+#    #+#             */
-/*   Updated: 2021/10/04 11:52:35 by apila-va         ###   ########.fr       */
+/*   Updated: 2021/10/04 16:52:02 by apila-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ char **ft_allocate_memmory(char const *s,char c,char **ptr1)
 	i = 0;
 	ptr2 = ptr1;
 	ptr = (char *) s;
+
+	printf("%c = %c \n" , *ptr,c);
 
 	while(*ptr)
 	{
@@ -79,7 +81,7 @@ char **ft_split(char const *s, char c)
 int main(int argc , char **argv)
 {
 	char **ptr3;
-	ptr3 = ft_split(argv[1], '.');
+//	ptr3 = ft_split(argv[1], '.');
 //	printf("%s" , ptr3[0]);
 	return (0);
 }
