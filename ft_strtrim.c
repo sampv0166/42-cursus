@@ -6,7 +6,7 @@
 /*   By: apila-va <apila-va@42.abudhabi.ae>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 03:54:55 by apila-va          #+#    #+#             */
-/*   Updated: 2021/10/04 09:15:03 by apila-va         ###   ########.fr       */
+/*   Updated: 2021/10/16 19:30:04 by apila-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,12 +80,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (ptr);
 }
 
-/*int main ()
+int main ()
 {
-	char s1[] = "etdecctechktcetch";
-	char set[] = "tech";
-
-	ft_strtrim2(s1 , set);
-	printf("%s" , ft_strtrim2(s1 , set));
+	char s1[] = "\t   \n\n\n  \n\n\t    Hello \t  Please\n Trim me !\t\t\t\n  \t\t\t\t";
+	//char s1[] = "etdecctechktcetch";
+	char set[] =  " \n\t";
+	ft_strtrim(s1 , set);
+	printf("%s" , ft_strtrim(s1 , set));
 	return (0);
-}*/
+}

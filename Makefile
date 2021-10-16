@@ -24,13 +24,38 @@ SRCS        = ft_memset.c \
               ft_strdup.c \
 			  ft_substr.c \
 			  ft_strjoin.c \
-			  ft_strtrim.c
+			  ft_strtrim.c \
+			  ft_split.c \
+			  ft_putchar_fd.c \
+			  ft_putstr_fd.c\
+			  ft_putendl_fd.c\
+			  ft_putnbr_fd.c \
+			  ft_itoa.c \
+			  ft_strmapi.c \
+			  ft_striteri.c
+
+BNS_SRCS	= ft_lstnew.c \
+			  ft_lstadd_front.c \
+			  ft_lstsize.c \
+			  ft_lstlast.c \
+			  ft_lstadd_back.c \
+			  ft_lstdelone.c \
+			  ft_lstclear.c \
+			  ft_lstiter.c \
+			  ft_lstmap.c 
+
 OBJS        = $(SRCS:%.c=%.o)
+
+BNS_OBJS	= $(BNS_SRCS:%.c=%.o)
+
 FLAGS       = -Wall -Werror -Wextra
 $(NAME):
 	gcc $(FLAGS) -c $(SRCS) -I ./
 	ar rc $(NAME) $(OBJS)
 all: $(NAME)
+bonus: $(NAME)
+	gcc $(FLAGS) -c $(BNS_SRCS) -I ./
+	ar rc $(NAME) $(BNS_OBJS)	
 clean:
 	rm -f $(OBJS)
 fclean: clean
