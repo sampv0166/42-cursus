@@ -6,7 +6,7 @@
 /*   By: apila-va <apila-va@42.abudhabi.ae>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 14:48:02 by apila-va          #+#    #+#             */
-/*   Updated: 2021/10/04 08:44:02 by apila-va         ###   ########.fr       */
+/*   Updated: 2021/10/16 21:33:01 by apila-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,8 @@
 int	ft_atoi(const char *str)
 {
 	int		sign;
-	int		flag;
-	int		ret;
+	unsigned	int		ret;
 
-	flag = 0;
 	sign = 1;
 	ret = 0;
 	while (*str == '\t' || *str == '\v' || *str == '\f' || \
@@ -29,7 +27,6 @@ int	ft_atoi(const char *str)
 	if (str[0] == '-')
 	{
 		sign = sign * -1;
-		flag = 1;
 		str++;
 	}
 	if (str[0] == '+')
@@ -39,7 +36,12 @@ int	ft_atoi(const char *str)
 		ret = ret * 10 + *str - '0';
 		str++;
 	}
-	if (flag == 1)
-		return (-ret);
-	return (ret);
+	//if (ret == )
+	return (sign*ret);
+}
+
+int main ()
+{
+	printf("%d", atoi("4294967298"));
+	return (0);
 }
