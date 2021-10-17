@@ -6,7 +6,7 @@
 /*   By: apila-va <apila-va@42.abudhabi.ae>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 14:48:02 by apila-va          #+#    #+#             */
-/*   Updated: 2021/10/16 21:33:01 by apila-va         ###   ########.fr       */
+/*   Updated: 2021/10/17 17:46:23 by apila-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,34 +14,26 @@
 
 int	ft_atoi(const char *str)
 {
-	int		sign;
-	unsigned	int		ret;
+	int	i;
+	int	s;
+	int	res;
 
-	sign = 1;
-	ret = 0;
-	while (*str == '\t' || *str == '\v' || *str == '\f' || \
-		 *str == '\r' || *str == '\n' || *str == ' ')
+	i = 0;
+	s = 1;
+	res = 0;
+	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t' || \
+			str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
+		i++;
+	if (str[i] == '-' || str[i] == '+')
 	{
-		str++;
+		if (str[i] == '-')
+			s = -1;
+		i++;
 	}
-	if (str[0] == '-')
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		sign = sign * -1;
-		str++;
+		res = (res * 10) + (str[i] - '0');
+		i++;
 	}
-	if (str[0] == '+')
-		str++;
-	while (*str >= 48 && *str <= 57)
-	{
-		ret = ret * 10 + *str - '0';
-		str++;
-	}
-	//if (ret == )
-	return (sign*ret);
-}
-
-int main ()
-{
-	printf("%d", atoi("4294967298"));
-	return (0);
+	return (res * s);
 }

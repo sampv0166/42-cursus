@@ -6,22 +6,19 @@
 /*   By: apila-va <apila-va@42.abudhabi.ae>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/16 15:43:03 by apila-va          #+#    #+#             */
-/*   Updated: 2021/10/16 15:59:32 by apila-va         ###   ########.fr       */
+/*   Updated: 2021/10/17 15:11:30 by apila-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list *position;
-
-	position = lst;
-	if(!lst)
+	if (!lst || !f)
 		return ;
-	while(position != NULL)
+	while (lst)
 	{
-		f(position->content);
-		position = position->next;	
+		f(lst->content);
+		lst = lst->next;
 	}
 }

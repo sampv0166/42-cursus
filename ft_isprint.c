@@ -6,13 +6,13 @@
 /*   By: apila-va <apila-va@42.abudhabi.ae>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 20:42:25 by apila-va          #+#    #+#             */
-/*   Updated: 2021/10/01 02:26:43 by apila-va         ###   ########.fr       */
+/*   Updated: 2021/10/17 15:44:05 by apila-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c < 127)
 	{
