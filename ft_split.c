@@ -6,13 +6,13 @@
 /*   By: apila-va <apila-va@42.abudhabi.ae>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/16 07:53:59 by apila-va          #+#    #+#             */
-/*   Updated: 2021/10/18 00:34:16 by apila-va         ###   ########.fr       */
+/*   Updated: 2021/10/20 11:28:17 by apila-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_count(char const *s, char c)
+static size_t	ft_count(char const *s, char c)
 {
 	size_t		i;
 	size_t		j;
@@ -37,7 +37,7 @@ size_t	ft_count(char const *s, char c)
 	return (j);
 }
 
-char	**ft_create_string(char **ptr, char const *s, char c, size_t len)
+static char	**ft_create_string(char **ptr, char const *s, char c, size_t len)
 {
 	size_t	i;
 	size_t	array_index;

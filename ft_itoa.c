@@ -6,13 +6,13 @@
 /*   By: apila-va <apila-va@42.abudhabi.ae>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/16 09:43:22 by apila-va          #+#    #+#             */
-/*   Updated: 2021/10/18 00:53:10 by apila-va         ###   ########.fr       */
+/*   Updated: 2021/10/20 11:27:38 by apila-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_find_len(long num)
+static size_t	ft_find_len(long num)
 {
 	size_t	len;
 	long	number;
@@ -31,7 +31,7 @@ size_t	ft_find_len(long num)
 	return (len + 1);
 }
 
-void	ft_itoa2(long number, char *ptr, size_t i, int n)
+static void	ft_itoa2(long number, char *ptr, size_t i, int n)
 {
 	while (number != 0)
 	{

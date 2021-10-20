@@ -6,7 +6,7 @@
 /*   By: apila-va <apila-va@42.abudhabi.ae>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 14:48:02 by apila-va          #+#    #+#             */
-/*   Updated: 2021/10/17 17:46:23 by apila-va         ###   ########.fr       */
+/*   Updated: 2021/10/20 12:08:24 by apila-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	s;
-	int	res;
+	size_t	i;
+	size_t	s;
+	size_t	res;
 
 	i = 0;
 	s = 1;
